@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aecc5df-7634-4d16-a450-9810c140d0ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/Wood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GuitarSpec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuitarrasHFO/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuitarrasHFO/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuitarrasHFO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuitarrasHFO/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Guitar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guitar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -24,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -96,14 +92,9 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Inventory.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Inventory.java</url>
-          <line>29</line>
+          <line>27</line>
           <properties class="Inventory" method="search">
             <option name="EMULATED" value="true" />
           </properties>

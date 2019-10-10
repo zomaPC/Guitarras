@@ -12,8 +12,8 @@ public class Main {
         InitializeInventory(inventory);
         System.out.println("type");
         System.out.println(Type.ELECTRIC.toString());
-        Guitar whatErinLikes = new Guitar("", 0, Builder.FENDER.toString(), "Stratocastor",
-                Type.ELECTRIC.toString(), Wood.ALDER.toString(), Wood.ALDER.toString());
+        GuitarSpec whatErinLikes = new GuitarSpec( Builder.FENDER, "Stratocastor",
+                Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
 
 
         List matchingGuitars = inventory.search(whatErinLikes);
@@ -21,10 +21,11 @@ public class Main {
             System.out.println("Ering, te pueden gustar estas guitarras");
             for (Iterator i = matchingGuitars.iterator(); i.hasNext(); ) {
                 Guitar guitar = (Guitar)i.next();
-                System.out.println("Tenemos una" + guitar.getBuilder() + " " + guitar.getModel() + " " +
-                        guitar.getType() + " " + "guitar:\n " +
-                        guitar.getBackWood() + "Fondo y costado,\n " +
-                        guitar.getTopWood() + "top.\n Puedes tenerla por solo $" +
+                GuitarSpec spec = guitar.getSpec();
+                System.out.println("Tenemos una" + spec.getBuilder() + " " + spec.getModel() + " " +
+                        spec.getType() + " " + "guitar:\n " +
+                        spec.getBackWood() + "Fondo y costado,\n " +
+                        spec.getTopWood() + "top.\n Puedes tenerla por solo $" +
                         guitar.getPrice() + "!\n ---- ");
             }
         }else{
@@ -32,12 +33,12 @@ public class Main {
         }
     }
     private static void InitializeInventory(Inventory inventory){
-        inventory.addGuitar("12345",500.35,Builder.FENDER.toString(), "Stratocastor", Type.ELECTRIC.toString(),Wood.ALDER.toString(),Wood.ALDER.toString());
-        inventory.addGuitar("12346",400.35, Builder.FENDER.toString(),"T9A",Type.ACOUSTIC.toString(),Wood.ALDER.toString(),Wood.ALDER.toString());
-        inventory.addGuitar("12347",700.35, Builder.FENDER.toString(),"Stratocastor",Type.ELECTRIC.toString(),Wood.ALDER.toString(),Wood.ALDER.toString());
-        inventory.addGuitar("12348",800.35, Builder.FENDER.toString(),"T97",Type.ACOUSTIC.toString(),Wood.ALDER.toString(),Wood.ALDER.toString());
-        inventory.addGuitar("12349",700.35, Builder.FENDER.toString(),"TNF",Type.ELECTRIC.toString(),Wood.ALDER.toString(),Wood.ALDER.toString());
-        inventory.addGuitar("12358",450.54,Builder.FENDER.toString(), "tfc",Type.ACOUSTIC.toString(),Wood.ALDER.toString(),Wood.ALDER.toString());
+        inventory.addGuitar("12345",500.35, new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC,Wood.ALDER,Wood.ALDER));
+        inventory.addGuitar("12346",400.35,new GuitarSpec(Builder.FENDER,"T9A",Type.ACOUSTIC,Wood.ALDER,Wood.ALDER));
+        inventory.addGuitar("12347",700.35,new GuitarSpec(Builder.FENDER,"Stratocastor",Type.ELECTRIC,Wood.ALDER,Wood.ALDER));
+        inventory.addGuitar("12348",800.35, new GuitarSpec(Builder.FENDER,"T97",Type.ACOUSTIC,Wood.ALDER,Wood.ALDER));
+        inventory.addGuitar("12349",700.35, new GuitarSpec(Builder.FENDER,"TNF",Type.ELECTRIC,Wood.ALDER,Wood.ALDER));
+        inventory.addGuitar("12358",450.54,new GuitarSpec(Builder.FENDER, "tfc",Type.ACOUSTIC,Wood.ALDER,Wood.ALDER));
     }
 }
 
